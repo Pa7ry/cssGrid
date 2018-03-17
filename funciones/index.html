@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*funciones como repeat(n#, tamaño); minmax(min, max)
+        fr =>  fracciones de pantalla*/
+        .container {
+            display: grid;
+            /*grid-template: repeat(3, 1fr) / repeat(4, 1fr);*/
+            grid-template: repeat(3, 1fr) / repeat(4, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+        .item {
+            background: plum;
+            padding: 10px;
+            border: royalblue solid 2px;
+            grid-template: repeat(2, 1fr) / repeat(2, minmax(200px, 1fr));
+            grid-gap: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">contenido #1</div>
+        <div class="item">contenido #2</div>
+        <div class="item">contenido #3</div>
+        <div class="item">
+            <div class="item">hijo #1</div>
+            <div class="item">hijo #2</div>
+            <div class="item">hijo #3</div>
+            <div class="item">hijo #4</div>
+        </div>
+        <div class="item">contenido #5</div>
+        <div class="item">contenido #6</div>
+        <div class="item">contenido #7</div>
+        <div class="item">contenido #8</div>
+        <div class="item">contenido #9</div>
+        <div class="item">contenido #10</div>
+        <div class="item">contenido #11</div>
+        <div class="item">contenido #12</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tamaño ítem en columnas</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(4, 25%);
+    }
+    .item {
+        background: mediumvioletred;
+        border: mediumorchid solid 2px;
+    }
+    .item:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        /*grid-column-start y grid-column-end va por líneas, empezando por la del margen izquierdo*/
+        background: limegreen;
+    }
+    .item:nth-child(5) {
+        grid-column: 1 / 4;
+        background: blueviolet;
+        /*junta grid-column-start y grid-column-end*/
+    }
+    .item:nth-child(6) {
+        grid-column: 1 / span 3;
+        /*con span cuenta x desde la posicion de inicio*/
+        background: aqua;
+    }
+    .item:nth-child(8) {
+        grid-column: 1 / -1;
+        /*acaba en la última líena, es decir, ocupa todo el ancho desde donde arranca*/
+        background: bisque;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
+    </div>
+</body>
+</html>

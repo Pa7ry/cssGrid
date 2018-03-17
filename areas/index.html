@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Areas</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+        .papa {
+            display: grid;
+            height: 100%;
+            grid-template-areas: 'header header header'
+                                'menu main main'
+                                'footer footer footer';
+            background: rgb(7, 165, 157);
+            grid-template-rows: 1fr 60% 1fr;
+        }
+        .header {
+            grid-area: header;
+            border: paleturquoise solid 2px ;
+        }
+        .menu {
+            grid-area: menu;
+            border: paleturquoise solid 2px ;
+        }
+        .main {
+            grid-area: main;
+            border: paleturquoise solid 2px ;
+        }
+        .footer {
+            grid-area: footer;
+            border: paleturquoise solid 2px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="papa">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

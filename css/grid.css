@@ -1,0 +1,17 @@
+/*Grid container:elemetno padre que va a tener puesto un nuevo tipo de display: grid. Nos tiene que colocar
+
+Grid item: son nuestros componenetes, contenido, lo que vamos a manejar. Nuestras filas o columnas que vamos a mover 
+a nuestro gusto. Son hijos directos de grid.
+
+Grid lines: lineas divisorias horizontales y verticales.
+
+Grid track: espacio entre dos lineas adyacentes. Filas y columnas.
+
+Grid cell: celdas, espacio en dos filas adyacentes y dos columnas adyacentes.
+
+Grid area: espacio rodeado por 4 grid lines.
+*/
+
+container {
+    display: grid;
+}
